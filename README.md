@@ -434,4 +434,4 @@ options = "metadata"
 * [Tutarial interessante sulle regex (Youtube)](https://www.youtube.com/watch?v=sa-TUpSx1JA)
 * [Opzioni .nanorc](https://linuxhint.com/configure_nano_text_editor_nanorc/)
 * [How to Run Graphical Linux Desktop Applications from Windows 10’s Bash Shell](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/)
-* Table of Contents created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
+* Table of Contents powered by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
