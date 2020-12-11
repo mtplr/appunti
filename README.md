@@ -1,3 +1,9 @@
+# Linux shell cookbook 
+
+Alcuni comandi utili in continuo aggiornamento che mi sono appuntato durante il mio apprendimento di linux, shell, 
+WSL e cose varie.
+
+
 Table of Contents
 =================
 
@@ -21,11 +27,7 @@ Table of Contents
       * [Cicli for utili](#cicli-for-utili)
    * [WSL](#wsl)
    * [Risorse e link vari](#risorse-e-link-vari)
-
-# Linux shell cookbook 
-
-Alcuni comandi utili in continuo aggiornamento che mi sono appuntato durante il mio apprendimento di linux, shell, 
-WSL e cose varie.
+   
 
 ## Importante (generale)
 
