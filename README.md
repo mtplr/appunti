@@ -383,8 +383,21 @@ molti _puristi_.
 `wslpath -a` restituisce il path utilizzabile da WSL (linux):
 
 ```bash
-:~$ wslpath -a 'C:/Robe'
-:~$ 'mnt/c/Robe'
+$ wslpath -a 'C:/Robe'
+$ 'mnt/c/Robe'
+```
+
+Di default non funziona l'assegnazione dei permessi con `chmod`. Per farlo è necessario abilitarlo da shell: 
+[Unable to change file permissions on Ubuntu Bash for Windows 10](https://superuser.com/questions/1323645/unable-to-change-file-permissions-on-ubuntu-bash-for-windows-10)
+
+```bash
+$ sudo nano /etc/wsl.conf
+
+# aggiungi questo:
+[automount]
+options = "metadata"
+
+# reboot WSL 
 ```
 
 # Risorse e link vari
