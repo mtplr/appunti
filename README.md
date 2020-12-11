@@ -1,3 +1,27 @@
+Table of Contents
+=================
+
+   * [Linux shell cookbook](#linux-shell-cookbook)
+      * [Importante (generale)](#importante-generale)
+      * [Alias e comandi personalizzati](#alias-e-comandi-personalizzati)
+      * [Navigazione](#navigazione)
+      * [less](#less)
+      * [Ranger](#ranger)
+      * [Archivi](#archivi)
+      * [Jolly](#jolly)
+      * [nano](#nano)
+      * [Ricerca file e testo](#ricerca-file-e-testo)
+         * [find](#find)
+         * [grep](#grep)
+      * [SSH](#ssh)
+      * [rsync](#rsync)
+      * [Miscellanea](#miscellanea)
+      * [Python path](#python-path)
+      * [Bash scripting](#bash-scripting)
+      * [Cicli for utili](#cicli-for-utili)
+   * [WSL](#wsl)
+   * [Risorse e link vari](#risorse-e-link-vari)
+
 # Linux shell cookbook 
 
 Alcuni comandi utili in continuo aggiornamento che mi sono appuntato durante il mio apprendimento di linux, shell, 
@@ -408,3 +432,4 @@ options = "metadata"
 * [Tutarial interessante sulle regex (Youtube)](https://www.youtube.com/watch?v=sa-TUpSx1JA)
 * [Opzioni .nanorc](https://linuxhint.com/configure_nano_text_editor_nanorc/)
 * [How to Run Graphical Linux Desktop Applications from Windows 10’s Bash Shell](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/)
+* Table of Contents created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
