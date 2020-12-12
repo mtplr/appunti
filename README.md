@@ -81,7 +81,7 @@ Table of Contents
 
 `mv file1 file2` rename/move a file
 
-`mkdir` crea cartella
+`mkdir` crea cartella. Prende anche più argomenti e.g `mkdir dir1 dir2 dir3`
 
 `pwd` will output the name of the present working directory
 
