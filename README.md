@@ -162,7 +162,7 @@ Molto utile per leggere tutti i plain text.
 
 ---
 
-File association with Ranger: [informazioni da Superuser.com](https://superuser.com/questions/1234893/how-to-change-the-default-document-viewer-in-ranger)
+File association with Ranger: [How to change the default document viewer in ranger?](https://superuser.com/questions/1234893/how-to-change-the-default-document-viewer-in-ranger)
 
 > For text files rifle (ranger's file opener) uses your default `$EDITOR`. You can set it to vim by adding the line export `EDITOR=vim` to your `~/.bashrc` or equivalent.
 >
