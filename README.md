@@ -214,6 +214,17 @@ E' bello e user-friendly. [Qui il cheatsheet.](https://www.nano-editor.org/dist/
 
 `Alt+R` redo
 
+### .nanorc
+
+Si può modificare `.nanorc` ([docu](https://www.nano-editor.org/dist/latest/nanorc.5.html)) aggiungendoci opzioni di configurazione interessanti, tipo:
+
+```bash
+set autoindent  # indent lines automatically
+set backupdir directory  # Make and keep not just one backup file, but make and keep a uniquely numbered one every time a file is saved
+set mouse  # enable mouse support
+```
+
+
 ## Ricerca file e testo
 
 ### find
