@@ -25,6 +25,8 @@ Open a file: `⌘ O`
 
 New file: `⌘ ⌥ N` (see [the script here](https://apple.stackexchange.com/questions/129699/create-a-new-txt-file-in-finder-keyboard-shortcut))
 
+New folder: `⌘ ⇧ N`
+
 Inspect/change extension: `⌘ I`
 
 Redo: `⌘ ⇧ Z`
