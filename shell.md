@@ -1,4 +1,4 @@
-Linux shell cookbook
+Bash shell cookbook
 =====================
 
 Alcuni comandi utili in continuo aggiornamento che mi sono appuntato durante il mio apprendimento di linux, shell, 
