@@ -44,3 +44,7 @@ Delete a line: `⌘ ⇧ K`
 Copy a line up (down): `⌥ ⇧ ↑`
 
 Search & Replace: `⌘ ⌥ F`
+
+Insert multiple cursors: `⌥`+ click
+
+Go to line: `^G`
