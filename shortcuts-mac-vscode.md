@@ -33,6 +33,10 @@ Redo: `⌘ ⇧ Z`
 
 Copy path: RightClick on the file + `⌥`
 
+Cut=`⌘ C` Paste:`⌘ ⇧ V`
+
+Go to end (begin) of a line: `⌘ →`
+
 ## VSCode
 
 Run without debugging: `^ ⌥`
