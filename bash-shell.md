@@ -23,7 +23,7 @@ Table of Contents
       * [SSH](#ssh)
       * [rsync](#rsync)
       * [Miscellanea](#miscellanea)
-      * [Python path](#python-path)
+      * [Python (path e conda)](#Python-path-e-conda)
       * [Bash scripting](#bash-scripting)
       * [Cicli for utili](#cicli-for-utili)
    * [WSL](#wsl)
@@ -313,7 +313,23 @@ Host nomealias
 rsync -zvrah --delete --progress user@server:/home "/mnt/c/Backup"
 ```
 
+```bash
+conda create --name myenv 
 
+# with a specific version 
+conda create --name myenv
+
+# to activate
+conda activate myenv
+
+# to install packages
+conda install -n myenv scipy=0.15.0 
+
+#(or without version)
+conda install -n myenv scipy=0.15.0 
+
+conda info # displays info
+```
 
 ## Miscellanea
 
@@ -370,7 +386,7 @@ linux, ATTENZIONE all'-i che vuol dire "in line mod"
 
 `>>` append to
 
-## Python path
+## Python (path e conda)
 
 `python -c "import sys; print(sys.path)"` per vedere dov'è il path python giusto
 
