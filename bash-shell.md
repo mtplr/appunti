@@ -313,24 +313,6 @@ Host nomealias
 rsync -zvrah --delete --progress user@server:/home "/mnt/c/Backup"
 ```
 
-```bash
-conda create --name myenv 
-
-# with a specific version 
-conda create --name myenv
-
-# to activate
-conda activate myenv
-
-# to install packages
-conda install -n myenv scipy=0.15.0 
-
-#(or without version)
-conda install -n myenv scipy=0.15.0 
-
-conda info # displays info
-```
-
 ## Miscellanea
 
 `screenfetch` info belle di sistema con il logo in ASCII 
@@ -393,6 +375,25 @@ linux, ATTENZIONE all'-i che vuol dire "in line mod"
 `#!/usr/bin/env python3` da mettere come shebang all'inizio dello script python per farlo interpretare corretamente 
 a linux indipendentemente dalla distribuzione
 
+Comandi essenziali **Conda** (miniforge):
+```bash
+conda create --name myenv 
+
+# with a specific version 
+conda create --name myenv
+
+# to activate
+conda activate myenv
+
+# to install packages
+conda install -n myenv scipy=0.15.0 
+
+#(or without version)
+conda install -n myenv scipy=0.15.0 
+
+conda info # displays info
+```
+
 ## Bash scripting
 
 `#!/bin/bash` shebang da mettere sempre
@@ -410,7 +411,6 @@ Per splittare un comando singolo in più linee (attenzione al LF! attenzione ci 
 "../acetone/IR-norm.dat" \
 "../DMSO/IR-norm.dat" \
 "../chcl3/IR-norm.dat"
-
 ```
 
 ## Cicli for utili
