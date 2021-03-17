@@ -1,15 +1,13 @@
-# Shortcuts
-
 Some useful shortcuts.
 
-## Notes
+# Notes
 
 * `SB` = spacebar
 * `BS` = backspace
 * `^` = Ctrl
 * `⌥`= Alt
 
-## MacOS
+# MacOS
 
 Backtick: `⌥ 9`
 
@@ -39,7 +37,7 @@ Go to end (begin) of a line: `⌘ →`
 
 Preferences: `⌘,`
 
-## VSCode
+# VSCode
 
 Run without debugging: `^ ⌥`
 
@@ -54,3 +52,21 @@ Search & Replace: `⌘ ⌥ F`
 Insert multiple cursors: `⌥`+ click
 
 Go to line: `^G`
+
+## Snippet keys
+
+### Latex
+
+Shortcuts:
+
+`$...$` 
+
+`\ce{...}`
+
+Snippet:
+
+Fraction `frac`, Figure `fig`, Equation `eq`, Table1 `t1`, itemize `itemize`
+
+### Python
+
+Quick plot with matplotlib `quick-plot`
