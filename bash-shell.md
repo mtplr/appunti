@@ -352,7 +352,7 @@ linux, ATTENZIONE all'-i che vuol dire "in line mod"
 
 `rename 's/chcl3/DMSO/' *` rinomina tutti i file della cartella contenenti `chcl3` con `DMSO`. Per printare solo il risultato basta aggiungere `-n`. 
 
-`split -l 47 --numeric-suffixes conformers.xyz conformer_`splitta un file di testo prendendo le prime 47 righe incluse, usi come suffisso l'ultimo parametro e ci appendi un numero 
+`split -dl 47 crest_conformers.xyz conformer --additional-suffix=.xyz` splitta un file di testo prendendo le prime 47 righe incluse, usi come suffisso `conformer` e ci appende un numero (`-d`). L'output sarà: `conformer00.xyz conformer01.xyz conformer02.xyz ...`.
 
 `tac` è `cat` al contrario (stampa dal fondo)
 
@@ -475,8 +475,5 @@ options = "metadata"
 # Risorse e link vari
 
 * [Introduction to Scientific Computing](https://gitlab.com/eamonnmurray/IntroToScientificComputing/-/blob/master/README.md). Eccellente risorsa schematica per coloro che si affacciano a linux, allo scientific computing e alla chimica computazionale.
-
 * [Tutarial interessante sulle regex (Youtube)](https://www.youtube.com/watch?v=sa-TUpSx1JA)
-* [Opzioni .nanorc](https://linuxhint.com/configure_nano_text_editor_nanorc/)
-* [How to Run Graphical Linux Desktop Applications from Windows 10’s Bash Shell](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/)
 * Table of Contents powered by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
