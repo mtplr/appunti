@@ -366,9 +366,13 @@ linux, ATTENZIONE all'-i che vuol dire "in line mod"
 
 `curl ipinfo.io` vede le info sul tuo IP
 
-`>` redirect to 
+`>` redirect to (**no errors**)
 
-`>>` append to
+`&>` redirect to (**with** output errors)
+
+`>>` append to (if already exist)
+
+
 
 ## Python (path e conda)
 
