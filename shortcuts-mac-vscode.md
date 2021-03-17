@@ -59,9 +59,22 @@ Go to line: `^G`
 
 Shortcuts:
 
-`$...$` 
+`$...$` cmd+shift+1
 
-`\ce{...}`
+`\ce{...}` cmd+shift+2
+
+Example for `\ce{}` in `keybindings.json`:
+
+```json
+    {
+        "key": "cmd+shift+1",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+            "snippet": "\\ce{$TM_SELECTED_TEXT}"            
+        }
+    },
+```
 
 Snippet:
 
