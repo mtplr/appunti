@@ -231,7 +231,7 @@ set mouse  # enable mouse support
 
 `find . -name "*.cpp"` will find all files ending in .cpp in the current
 directory `.` and its subdirectories. To match the actual `.` or `*` symbols, you can escape them as `\.`
-and `\*`.
+and `\*`. Case Sensitive! Per una parte sola usa `"OUT*"` tipo per `OUTPUT`
 
 `find . -maxdepth 1 -type d` cerca tutte le sottocartelle (max 1 di profondità)
 
@@ -351,6 +351,8 @@ linux, ATTENZIONE all'-i che vuol dire "in line mod"
 > read the rest of the file, and do nothing with it. For big files it can make a difference.
 
 `rename 's/chcl3/DMSO/' *` rinomina tutti i file della cartella contenenti `chcl3` con `DMSO`. Per printare solo il risultato basta aggiungere `-n`. 
+
+`split -l 47 --numeric-suffixes conformers.xyz conformer_`splitta un file di testo prendendo le prime 47 righe incluse, usi come suffisso l'ultimo parametro e ci appendi un numero 
 
 `tac` è `cat` al contrario (stampa dal fondo)
 
