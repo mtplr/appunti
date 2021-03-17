@@ -474,8 +474,7 @@ options = "metadata"
 
 # Risorse e link vari
 
-* Eccellente risorsa schematica per coloro che si affacciano a linux *e/o* alla chimica computazionale: [qui by Éamonn 
-  Murray](https://gitlab.com/eamonnmurray/IntroToScientificComputing/-/blob/master/README.md).
+* [Introduction to Scientific Computing](https://gitlab.com/eamonnmurray/IntroToScientificComputing/-/blob/master/README.md). Eccellente risorsa schematica per coloro che si affacciano a linux, allo scientific computing e alla chimica computazionale.
 
 * [Tutarial interessante sulle regex (Youtube)](https://www.youtube.com/watch?v=sa-TUpSx1JA)
 * [Opzioni .nanorc](https://linuxhint.com/configure_nano_text_editor_nanorc/)
