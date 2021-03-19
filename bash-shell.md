@@ -412,7 +412,7 @@ conda info # displays info
 
 `$1` usalo come primo argomento variabile nel `.sh` (sarà il primo comando passato da terminale e così via, `$1, $2, $3...`)
 
-`$(comando)` metti il comando dentro questa variabile
+`VAR=$(comando)` metti il comando dentro questa variabile
 
 Per splittare un comando singolo in più linee (attenzione al LF! attenzione ci deve essere uno spazio prima ma NON dopo!)
 ```bash
