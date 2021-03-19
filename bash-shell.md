@@ -23,6 +23,7 @@ Table of Contents
       * [SSH](#ssh)
       * [rsync](#rsync)
       * [Miscellanea](#miscellanea)
+      * [I/O Redirect](#i-o-redirect)
       * [Python (path e conda)](#Python-path-e-conda)
       * [Bash scripting](#bash-scripting)
       * [Cicli for utili](#cicli-for-utili)
@@ -366,11 +367,15 @@ linux, ATTENZIONE all'-i che vuol dire "in line mod"
 
 `curl ipinfo.io` vede le info sul tuo IP
 
+## I/O Redirect
+
 `>` redirect to (**no errors**)
 
 `&>` redirect to (**with** output errors)
 
 `>>` append to (if already exist)
+
+`&&` "lets you do something based on whether the previous command completed successfully - that's why you tend to see it chained as `do_something && do_something_else_that_depended_on_something`." [source](https://stackoverflow.com/questions/4510640/what-is-the-purpose-of-in-a-shell-command)
 
 
 
