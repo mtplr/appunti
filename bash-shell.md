@@ -367,6 +367,8 @@ linux, ATTENZIONE all'-i che vuol dire "in line mod"
 
 `curl ipinfo.io` vede le info sul tuo IP
 
+`printf '%s\n' "${PWD##*/}"` printa il nome della cartella in cui sei (basename)
+
 ## I/O Redirect
 
 `>` redirect to (**no errors**)
