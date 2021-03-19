@@ -23,7 +23,7 @@ Table of Contents
       * [SSH](#ssh)
       * [rsync](#rsync)
       * [Miscellanea](#miscellanea)
-      * [I/O Redirect](#i-o-redirect)
+      * [I/O Redirect](#io-redirect)
       * [Python (path e conda)](#Python-path-e-conda)
       * [Bash scripting](#bash-scripting)
       * [Cicli for utili](#cicli-for-utili)
@@ -375,8 +375,7 @@ linux, ATTENZIONE all'-i che vuol dire "in line mod"
 
 `>>` append to (if already exist)
 
-`&&` "lets you do something based on whether the previous command completed successfully - that's why you tend to see it chained as `do_something && do_something_else_that_depended_on_something`." [source](https://stackoverflow.com/questions/4510640/what-is-the-purpose-of-in-a-shell-command)
-
+`&&` "lets you do something based on whether the previous command completed successfully - that's why you tend to see it chained as `do_something && do_something_else_that_depended_on_something`." [source e operatori](https://stackoverflow.com/questions/4510640/what-is-the-purpose-of-in-a-shell-command)
 
 
 ## Python (path e conda)
