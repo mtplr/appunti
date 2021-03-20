@@ -18,8 +18,6 @@ Table of Contents
       * [Jolly](#jolly)
       * [nano](#nano)
       * [Ricerca file e testo](#ricerca-file-e-testo)
-         * [find](#find)
-         * [grep](#grep)
       * [SSH](#ssh)
       * [rsync](#rsync)
       * [Miscellanea](#miscellanea)
@@ -368,6 +366,12 @@ linux, ATTENZIONE all'-i che vuol dire "in line mod"
 `curl ipinfo.io` vede le info sul tuo IP
 
 `printf '%s\n' "${PWD##*/}"` printa il nome della cartella in cui sei (basename)
+
+`cat /proc/cpuinfo | head -18` print CPU info (of the first one)
+
+`free -h` print RAM
+
+`df -h` print disk space
 
 ## I/O Redirect
 
