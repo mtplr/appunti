@@ -10,33 +10,33 @@ Table of Contents
 
    * [Bash shell cookbook](#bash-shell-cookbook)
    * [Table of Contents](#table-of-contents)
-      * [Importante (generale)](#importante-generale)
-      * [Jolly](#jolly)
-      * [Navigazione](#navigazione)
-      * [less](#less)
-      * [Ranger](#ranger)
-      * [Archivi](#archivi)
-      * [nano](#nano)
-         * [.nanorc](#nanorc)
-      * [Ricerca file e manipolazione testo](#ricerca-file-e-manipolazione-testo)
-         * [find](#find)
-         * [grep](#grep)
-         * [sed and rename](#sed-and-rename)
-         * [altro](#altro)
-      * [SSH](#ssh)
-      * [rsync](#rsync)
-      * [Miscellanea](#miscellanea)
-      * [Python e Conda](#python-e-conda)
-      * [Bash](#bash)
-         * [Alias, PATH](#alias-path)
-         * [Scripting](#scripting)
-         * [I/O Redirect](#io-redirect)
-         * [Cicli for utili](#cicli-for-utili)
+   * [Importante (generale)](#importante-generale)
+   * [Jolly](#jolly)
+   * [Navigazione](#navigazione)
+   * [less](#less)
+   * [Ranger](#ranger)
+   * [Archivi](#archivi)
+   * [nano](#nano)
+      * [.nanorc](#nanorc)
+   * [Ricerca file e manipolazione testo](#ricerca-file-e-manipolazione-testo)
+      * [find](#find)
+      * [grep](#grep)
+      * [sed and rename](#sed-and-rename)
+      * [altro](#altro)
+   * [SSH](#ssh)
+   * [rsync](#rsync)
+   * [Miscellanea](#miscellanea)
+   * [Python e Conda](#python-e-conda)
+   * [Bash](#bash)
+      * [Alias, PATH](#alias-path)
+      * [Scripting](#scripting)
+      * [I/O Redirect](#io-redirect)
+      * [Cicli for utili](#cicli-for-utili)
    * [WSL](#wsl)
    * [Risorse e link vari](#risorse-e-link-vari)
    
 
-## Importante (generale)
+# Importante (generale)
 
 * Ricorda che su **Windows** c'è `\r` (CRLF) e non `\n` (LF)!
 
@@ -52,7 +52,7 @@ Table of Contents
 * `G` in generale, vai in **FONDO** (nano Alt+/)
 * `g` in generale, vai in **CIMA**
 
-## Jolly
+# Jolly
 
 `?` = un char
 
@@ -60,7 +60,7 @@ Table of Contents
 
 `*` = tutto
 
-## Navigazione
+# Navigazione
 
 `cd ..` vai in su
 
@@ -90,7 +90,7 @@ Table of Contents
 
 `ln -s source_file symbolic_link` creo un link simbolico (collegamento)
 
-## less
+# less
 
 Molto utile per leggere tutti i plain text.
 
@@ -108,7 +108,7 @@ Molto utile per leggere tutti i plain text.
 
 `N` prev
 
-## Ranger
+# Ranger
 
 [Ranger Cheatsheet (by heroheman)](https://gist.github.com/heroheman/aba73e47443340c35526755ef79647eb)
 
@@ -176,7 +176,7 @@ File association with Ranger: [How to change the default document viewer in rang
 >
 > In `~/.config/ranger/rifle.conf` i added `ext c|cpp|txt|md = vim "$@"` in the first line and `ext c|cpp|txt|md = atom "$@"` in the second line, to use atom as my alternative editor. So it worked, thanks! 
 
-## Archivi
+# Archivi
 
 `xz`, comprime (solo file!) `.xz`
 
@@ -192,7 +192,7 @@ File association with Ranger: [How to change the default document viewer in rang
 
 `tar -xzvf file.tar.gz` to UNcompress a gzip tar file (.tgz or .tar.gz)
 
-## nano
+# nano
 
 E' bello e user-friendly. [Qui il cheatsheet.](https://www.nano-editor.org/dist/latest/cheatsheet.html)
 
@@ -220,7 +220,7 @@ E' bello e user-friendly. [Qui il cheatsheet.](https://www.nano-editor.org/dist/
 
 `Alt+R` redo
 
-### .nanorc
+## .nanorc
 
 Si può modificare `.nanorc` ([docu](https://www.nano-editor.org/dist/latest/nanorc.5.html)) aggiungendoci opzioni di configurazione interessanti, tipo:
 
@@ -232,9 +232,9 @@ set mouse  # enable mouse support
 include "/opt/homebrew/Cellar/nano/*/share/nano/*.nanorc"
 ```
 
-## Ricerca file e manipolazione testo
+# Ricerca file e manipolazione testo
 
-### find
+## find
 
 `find . -name "*.cpp"` will find all files ending in .cpp in the current
 directory `.` and its subdirectories. To match the actual `.` or `*` symbols, you can escape them as `\.`
@@ -244,7 +244,7 @@ and `\*`. Case Sensitive! Per una parte sola usa `"OUT*"` tipo per `OUTPUT`
 
 `find . -type d -exec script.sh "{}" ";"` cerca le cartelle ed eseguisci uno script dentro
 
-### grep
+## grep
 
 `grep -rni --include="*.txt" * -e 'ciao'` cerca ricorsivamente in QUELLA directory TUTTI i file txt la parola "ciao" case insensitive. Se vuoi la parola intera metti -w.
 
@@ -265,7 +265,7 @@ from the current directory
 
 `history | grep comando` trova tutti gli ultimi comandi relativi a quello
 
-### sed and rename
+## sed and rename
 
 `sed -i 's/\r$//' filename` se hai un file fatto in windows serve per togliere l'a capo che ti può dare errore da 
 linux, ATTENZIONE all'-i che vuol dire "in line mod"
@@ -280,7 +280,7 @@ linux, ATTENZIONE all'-i che vuol dire "in line mod"
 
 `rename 's/chcl3/DMSO/' *` rinomina tutti i file della cartella contenenti `chcl3` con `DMSO`. Per printare solo il risultato basta aggiungere `-n`.
 
-### altro
+## altro
 
 `diff file1 file2` will output the lines which differ between the two files.
 The lines from `file1` will be prepended with `<`  and the lines from
@@ -290,7 +290,7 @@ The lines from `file1` will be prepended with `<`  and the lines from
 
 `tac` è `cat` al contrario (stampa dal fondo)
 
-## SSH
+# SSH
 
 `scp` copia sicura SSH (`-r` per le cartelle) e.g. `scp file matteo@server:~/file.txt ~/Desktop`
 
@@ -311,7 +311,7 @@ Host nomealias
 # ssh user@nomealias
 ```
 
-## rsync
+# rsync
 
 [Come usare rsync, esempi pratici](https://devdev.it/comando-rsync-esempi-pratici-144/), Luca Murante:
 
@@ -344,7 +344,7 @@ Host nomealias
 rsync -zvrah --delete --progress user@server:/home "/mnt/c/Backup"
 ```
 
-## Miscellanea
+# Miscellanea
 
 `neofetch` info belle di sistema con il logo in ASCII (funziona anche su MacOS)
 
@@ -364,7 +364,7 @@ rsync -zvrah --delete --progress user@server:/home "/mnt/c/Backup"
 
 `curl ipinfo.io` vede le info sul tuo IP
 
-`printf '%s\n' "${PWD##*/}"` printa il nome della cartella in cui sei (basename)
+`printf '%s\n' "${PWD#*/}"` printa il nome della cartella in cui sei (basename)
 
 `cat /proc/cpuinfo | head -18` print CPU info (of the first one)
 
@@ -372,7 +372,7 @@ rsync -zvrah --delete --progress user@server:/home "/mnt/c/Backup"
 
 `df -h` print disk space
 
-## Python e Conda
+# Python e Conda
 
 `python -c "import sys; print(sys.path)"` per vedere dov'è il path python giusto
 
@@ -398,9 +398,9 @@ conda install -n myenv scipy=0.15.0
 conda info # displays info
 ```
 
-## Bash 
+# Bash 
 
-### Alias, PATH
+## Alias, PATH
 
 [Vedi `.bashrc` e `.alias` nei dotfiles per comandi personalizzati]
 
@@ -410,7 +410,7 @@ conda info # displays info
 
 `echo $PATH` per vedere i percorsi del `$PATH`
 
-### Scripting
+## Scripting
 
 `#!/bin/bash` shebang da mettere sempre
 
@@ -429,7 +429,7 @@ Per splittare un comando singolo in più linee (attenzione al LF! attenzione ci 
 "../chcl3/IR-norm.dat"
 ```
 
-### I/O Redirect
+## I/O Redirect
 
 `>` redirect to (**no errors**)
 
@@ -439,7 +439,7 @@ Per splittare un comando singolo in più linee (attenzione al LF! attenzione ci 
 
 `&&` "lets you do something based on whether the previous command completed successfully - that's why you tend to see it chained as `do_something && do_something_else_that_depended_on_something`." [source e operatori](https://stackoverflow.com/questions/4510640/what-is-the-purpose-of-in-a-shell-command)
 
-### Cicli for utili
+## Cicli for utili
 
 `for filename in */gas/BLA-1.dat; do ...`
 
