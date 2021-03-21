@@ -8,8 +8,6 @@ WSL e cose varie.
 Table of Contents
 =================
 
-   * [Bash shell cookbook](#bash-shell-cookbook)
-   * [Table of Contents](#table-of-contents)
    * [Importante (generale)](#importante-generale)
    * [Jolly](#jolly)
    * [Navigazione](#navigazione)
