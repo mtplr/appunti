@@ -8,30 +8,37 @@ WSL e cose varie.
 Table of Contents
 =================
 
-   * [Linux shell cookbook](#linux-shell-cookbook)
+   * [Bash shell cookbook](#bash-shell-cookbook)
+   * [Table of Contents](#table-of-contents)
       * [Importante (generale)](#importante-generale)
-      * [Alias e comandi personalizzati](#alias-e-comandi-personalizzati)
+      * [Jolly](#jolly)
       * [Navigazione](#navigazione)
       * [less](#less)
       * [Ranger](#ranger)
       * [Archivi](#archivi)
-      * [Jolly](#jolly)
       * [nano](#nano)
-      * [Ricerca file e testo](#ricerca-file-e-testo)
+         * [.nanorc](#nanorc)
+      * [Ricerca file e manipolazione testo](#ricerca-file-e-manipolazione-testo)
+         * [find](#find)
+         * [grep](#grep)
+         * [sed and rename](#sed-and-rename)
+         * [altro](#altro)
       * [SSH](#ssh)
       * [rsync](#rsync)
       * [Miscellanea](#miscellanea)
-      * [I/O Redirect](#io-redirect)
-      * [Python (path e conda)](#Python-path-e-conda)
-      * [Bash scripting](#bash-scripting)
-      * [Cicli for utili](#cicli-for-utili)
+      * [Python e Conda](#python-e-conda)
+      * [Bash](#bash)
+         * [Alias, PATH](#alias-path)
+         * [Scripting](#scripting)
+         * [I/O Redirect](#io-redirect)
+         * [Cicli for utili](#cicli-for-utili)
    * [WSL](#wsl)
    * [Risorse e link vari](#risorse-e-link-vari)
    
 
 ## Importante (generale)
 
-* Ricorda che su **Windows** c'è `\r` e non `\n`!
+* Ricorda che su **Windows** c'è `\r` (CRLF) e non `\n` (LF)!
 
 * Sugli editor, se vuoi usare script o codice da leggersi su Linux, è necessario cambiare tutti i `\r`!
 
@@ -42,18 +49,16 @@ Table of Contents
 * `Ctrl+C` annulla comando lanciato
 * `Ctrl+Z` Getta comando lanciato in background (`fg` per rimetterlo in _foreground_)
 
-* `G` in generale, vai in FONDO (nano Alt+/)
-* `g` in generale, vai in CIMA
+* `G` in generale, vai in **FONDO** (nano Alt+/)
+* `g` in generale, vai in **CIMA**
 
-## Alias e comandi personalizzati
+## Jolly
 
-[Vedi `.bashrc`]
+`?` = un char
 
----
+`[0,1,2]` = un range
 
-`l` listo tutto in ordine di cartelle (`alias l="ls --color -lah --group-directories-first"`)
-
-`r` apro ranger (`alias r="ranger"`)
+`*` = tutto
 
 ## Navigazione
 
@@ -77,19 +82,21 @@ Table of Contents
 
 `cp /home/asd/folder/{file{1,2},xyz,abc} /home/asd/dest` copia più files
 
-`scp` copia sicura ssh (`-r` per le cartelle) fallo da locale **VERSO** il server. Ormai quasi deprecato. Usare `rsync`.
-
 `mv file1 file2` rename/move a file
 
 `mkdir` crea cartella. Prende anche più argomenti e.g `mkdir dir1 dir2 dir3`
 
 `pwd` will output the name of the present working directory
 
+`ln -s source_file symbolic_link` creo un link simbolico (collegamento)
+
 ## less
 
 Molto utile per leggere tutti i plain text.
 
 `xzless` leggi testo compresso da `.xz`
+
+`shift+g` vai in fondo
 
 `q` quit
 
@@ -129,7 +136,7 @@ Molto utile per leggere tutti i plain text.
 
 ---
 
-`S` apre nuova shell **DENTRO** ranger (`exit` per uscire o `Ctrl+D`)
+`shift+s` apre nuova shell **DENTRO** ranger (`exit` per uscire o `Ctrl+D`)
 
 ---
 
@@ -171,19 +178,19 @@ File association with Ranger: [How to change the default document viewer in rang
 
 ## Archivi
 
-`xz`, comprime (solo file!) .xz
+`xz`, comprime (solo file!) `.xz`
 
 `unxz`, decomprime .xz
 
+`p7zip` gestisce i `.7z` e anche gli `.zip`, basta metterlo come estensione, di default è `7z`
 
-## Jolly
+`7z a -r ../archivio *` crea `archivio.7z` della dir in cui sei, nella dir superiore
 
-`?` = un char
+`7z e archivio.7z` estrae, uncompress
 
-`[0,1,2]` = un range
+`tar -czvf archive.tar.gz /path/to/directory-or-file` to COMPRESS a gzip tar file (.tgz or .tar.gz)
 
-`*` = tutto
-
+`tar -xzvf file.tar.gz` to UNcompress a gzip tar file (.tgz or .tar.gz)
 
 ## nano
 
@@ -219,12 +226,13 @@ Si può modificare `.nanorc` ([docu](https://www.nano-editor.org/dist/latest/nan
 
 ```bash
 set autoindent  # indent lines automatically
-set backupdir directory  # Make and keep not just one backup file, but make and keep a uniquely numbered one every time a file is saved
 set mouse  # enable mouse support
+
+# aggiungo supporto per la sintassi su Homebrew
+include "/opt/homebrew/Cellar/nano/*/share/nano/*.nanorc"
 ```
 
-
-## Ricerca file e testo
+## Ricerca file e manipolazione testo
 
 ### find
 
@@ -257,12 +265,36 @@ from the current directory
 
 `history | grep comando` trova tutti gli ultimi comandi relativi a quello
 
+### sed and rename
+
+`sed -i 's/\r$//' filename` se hai un file fatto in windows serve per togliere l'a capo che ti può dare errore da 
+linux, ATTENZIONE all'-i che vuol dire "in line mod"
+
+`sed '/PATTERN/q' FILE`, stampa tutto il file finché non trova `PATTERN`.
+
+> for each line, we look if it matches `/PATTERN`:
+> * If yes, we print it and quit 
+> * Otherwise, we print it \
+> This is the most efficient solution, because as soon as it sees PATTERN, it quits. Without q, sed would continue to 
+> read the rest of the file, and do nothing with it. For big files it can make a difference.
+
+`rename 's/chcl3/DMSO/' *` rinomina tutti i file della cartella contenenti `chcl3` con `DMSO`. Per printare solo il risultato basta aggiungere `-n`.
+
+### altro
+
+`diff file1 file2` will output the lines which differ between the two files.
+The lines from `file1` will be prepended with `<`  and the lines from
+`file2` with `>`.
+
+`split -dl 47 crest_conformers.xyz conformer --additional-suffix=.xyz` splitta un file di testo prendendo le prime 47 righe incluse, usi come suffisso `conformer` e ci appende un numero (`-d`). L'output sarà: `conformer00.xyz conformer01.xyz conformer02.xyz ...`.
+
+`tac` è `cat` al contrario (stampa dal fondo)
+
 ## SSH
 
-`xauth list` vedi il magic cookie porta (non so a cosa serva) e mettila aprendo XLaunch (quindi XMing)
+`scp` copia sicura SSH (`-r` per le cartelle) e.g. `scp file matteo@server:~/file.txt ~/Desktop`
 
-`kill -9 $(pgrep bash)` per killare tutte le active windows se hai il problema di avere più `pts` aperti e non sai 
-come chiuderli.
+`kill -9 $(pgrep bash)` per killare tutte le active windows se hai il problema di avere più `pts` aperti e non sai come chiuderli.
 
 ```bash
 # Per salvare un server SSH con X11 e mettere un alias
@@ -314,7 +346,7 @@ rsync -zvrah --delete --progress user@server:/home "/mnt/c/Backup"
 
 ## Miscellanea
 
-`screenfetch` info belle di sistema con il logo in ASCII 
+`neofetch` info belle di sistema con il logo in ASCII (funziona anche su MacOS)
 
 `htop` task manager
 
@@ -322,46 +354,13 @@ rsync -zvrah --delete --progress user@server:/home "/mnt/c/Backup"
 
 `du -hc . | sort -rh | head -20` spazio occupato dalla roba qua (.)
 
-`ln -s source_file symbolic_link` creo un link simbolico (collegamento)
-
-`export PATH=$PATH:percorso` aggiungi la cartella al `$PATH` linux (da aggiungersi alla fine di `.bashrc`)
-
-`echo $PATH` per vedere i percorsi del `$PATH`
-
 `chmod +x (775)` rendi il file eseguibile (e tutto il resto) da: me, group, not all (7= rwx, 5=rw)
 
 `history` storico dei comandi shell
 
 `!n` ripete l'n-esimo comando
 
-`diff file1 file2` will output the lines which differ between the two files.
-The lines from `file1` will be prepended with `<`  and the lines from
-`file2` with `>`.
-
-`sed -i 's/\r$//' filename` se hai un file fatto in windows serve per togliere l'a capo che ti può dare errore da 
-linux, ATTENZIONE all'-i che vuol dire "in line mod"
-
-`sed '/PATTERN/q' FILE`, stampa tutto il file finché non trova `PATTERN`.
-
-> for each line, we look if it matches `/PATTERN`:
-> * If yes, we print it and quit 
-> * Otherwise, we print it \
-> This is the most efficient solution, because as soon as it sees PATTERN, it quits. Without q, sed would continue to 
-> read the rest of the file, and do nothing with it. For big files it can make a difference.
-
-`rename 's/chcl3/DMSO/' *` rinomina tutti i file della cartella contenenti `chcl3` con `DMSO`. Per printare solo il risultato basta aggiungere `-n`. 
-
-`split -dl 47 crest_conformers.xyz conformer --additional-suffix=.xyz` splitta un file di testo prendendo le prime 47 righe incluse, usi come suffisso `conformer` e ci appende un numero (`-d`). L'output sarà: `conformer00.xyz conformer01.xyz conformer02.xyz ...`.
-
-`tac` è `cat` al contrario (stampa dal fondo)
-
 `gv` per aprire `.ps` e `.pdf` files via X11 in modo leggero e _veloce_
-
-`tar -czvf archive.tar.gz /path/to/directory-or-file` to COMPRESS a gzip tar file (.tgz or .tar.gz)
-
-`tar -xzvf file.tar.gz` to UNcompress a gzip tar file (.tgz or .tar.gz)
-
-`alias alias_name="command_to_run"` crea un alias (attenzione agli **spazi**!)
 
 `curl ipinfo.io` vede le info sul tuo IP
 
@@ -373,18 +372,7 @@ linux, ATTENZIONE all'-i che vuol dire "in line mod"
 
 `df -h` print disk space
 
-## I/O Redirect
-
-`>` redirect to (**no errors**)
-
-`&>` redirect to (**with** output errors)
-
-`>>` append to (if already exist)
-
-`&&` "lets you do something based on whether the previous command completed successfully - that's why you tend to see it chained as `do_something && do_something_else_that_depended_on_something`." [source e operatori](https://stackoverflow.com/questions/4510640/what-is-the-purpose-of-in-a-shell-command)
-
-
-## Python (path e conda)
+## Python e Conda
 
 `python -c "import sys; print(sys.path)"` per vedere dov'è il path python giusto
 
@@ -410,7 +398,19 @@ conda install -n myenv scipy=0.15.0
 conda info # displays info
 ```
 
-## Bash scripting
+## Bash 
+
+### Alias, PATH
+
+[Vedi `.bashrc` e `.alias` nei dotfiles per comandi personalizzati]
+
+`alias alias_name="command_to_run"` crea un alias (attenzione agli **spazi**!)
+
+`export PATH=$PATH:percorso` aggiungi la cartella al `$PATH` linux (da aggiungersi alla fine di `.bashrc`)
+
+`echo $PATH` per vedere i percorsi del `$PATH`
+
+### Scripting
 
 `#!/bin/bash` shebang da mettere sempre
 
@@ -429,7 +429,17 @@ Per splittare un comando singolo in più linee (attenzione al LF! attenzione ci 
 "../chcl3/IR-norm.dat"
 ```
 
-## Cicli for utili
+### I/O Redirect
+
+`>` redirect to (**no errors**)
+
+`&>` redirect to (**with** output errors)
+
+`>>` append to (if already exist)
+
+`&&` "lets you do something based on whether the previous command completed successfully - that's why you tend to see it chained as `do_something && do_something_else_that_depended_on_something`." [source e operatori](https://stackoverflow.com/questions/4510640/what-is-the-purpose-of-in-a-shell-command)
+
+### Cicli for utili
 
 `for filename in */gas/BLA-1.dat; do ...`
 
