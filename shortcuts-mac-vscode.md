@@ -37,6 +37,8 @@ Go to end (begin) of a line: `⌘ →`
 
 Preferences: `⌘,`
 
+In Preview, to switch from single-double page etc: `⌘1, ⌘2 ...`
+
 # VSCode
 
 Run without debugging: `^ ⌥`
@@ -46,6 +48,8 @@ Comment/uncomment block: `⌘ ⇧ 7`
 Delete a line: `⌘ ⇧ K`
 
 Copy a line up (down): `⌥ ⇧ ↑`
+
+**Bookmarks** shortcut: `⌥⌘K` insert; `⌥⌘L` avanti
 
 Search & Replace: `⌘ ⌥ F`
 
@@ -78,7 +82,7 @@ Example for `\ce{}` in `keybindings.json`:
 
 Snippet:
 
-Fraction `frac`, Figure `fig`, Equation `eq`, Table1 `t1`, itemize `itemize`
+Fraction `frac`, Figure `fig`, Equation `eq`, Table1 `t1`, itemize `itemize`, `bold`, `italic`
 
 ### Python
 

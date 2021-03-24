@@ -370,13 +370,36 @@ rsync -zvrah --delete --progress user@server:/home "/mnt/c/Backup"
 
 `df -h` print disk space
 
-# Python e Conda
+# Python
 
 `python -c "import sys; print(sys.path)"` per vedere dov'è il path python giusto
 
 `#!/usr/bin/env python3` da mettere come shebang all'inizio dello script python per farlo interpretare corretamente 
 a linux indipendentemente dalla distribuzione
 
+## argv
+
+`sys.argv[1]` Per passare il **primo comando** da shell in modo *quick-and-dirty* allo script python. Il primo argument (`[0]`) è sempre il nome dello script, dal secondo (`[1]`) ci sono le vars passate da shell.
+
+```python
+#!/usr/bin/python
+
+import sys
+
+print 'Number of arguments:', len(sys.argv), 'arguments.'
+print 'Argument List:', str(sys.argv)
+```
+
+Output:
+
+```bash
+$ python test.py arg1 arg2 arg3
+
+Number of arguments: 4 arguments.
+Argument List: ['test.py', 'arg1', 'arg2', 'arg3']
+```
+
+## Conda
 Comandi essenziali **Conda** (miniforge):
 ```bash
 conda create --name myenv 
@@ -413,6 +436,10 @@ conda info # displays info
 `#!/bin/bash` shebang da mettere sempre
 
 `$1` usalo come primo argomento variabile nel `.sh` (sarà il primo comando passato da terminale e così via, `$1, $2, $3...`)
+
+`$_` è il parametro più recente
+
+`nano script.sh && chmod +x $_` crea un nuovo script e lo rende eseguibile
 
 `VAR=$(comando)` metti il comando dentro questa variabile
 
