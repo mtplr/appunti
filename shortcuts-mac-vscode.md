@@ -39,6 +39,8 @@ Preferences: `⌘,`
 
 In Preview, to switch from single-double page etc: `⌘1, ⌘2 ...`
 
+Close session: `^⌘Q`
+
 # VSCode
 
 Run without debugging: `^ ⌥`
