@@ -284,7 +284,7 @@ linux, ATTENZIONE all'-i che vuol dire "in line mod"
 The lines from `file1` will be prepended with `<`  and the lines from
 `file2` with `>`.
 
-`split -dl 47 crest_conformers.xyz conformer --additional-suffix=.xyz` splitta un file di testo prendendo le prime 47 righe incluse, usi come suffisso `conformer` e ci appende un numero (`-d`). L'output sarà: `conformer00.xyz conformer01.xyz conformer02.xyz ...`.
+`split -dl 47 crest_conformers.xyz conformer --additional-suffix=.xyz` splitta un file di testo prendendo le prime 47 righe incluse, usi come suffisso `conformer` e ci appende un numero (`-d`). L'output sarà: `conformer00.xyz conformer01.xyz conformer02.xyz ...`. Se vuoi splittare DALLA 47 inclusa, metti `dl -46`.
 
 `tac` è `cat` al contrario (stampa dal fondo)
 
