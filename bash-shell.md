@@ -311,6 +311,11 @@ Host nomealias
 
 # rsync
 
+**IMPORTANTE**
+
+* `~/Backup/` copia *il contenuto* della cartella
+* `~/Backup` copia *la cartella* stessa
+
 [Come usare rsync, esempi pratici](https://devdev.it/comando-rsync-esempi-pratici-144/), Luca Murante:
 
 `rsync -zvrah ~/Desktop/devdev /Volumes/DiscoEsterno/Backup`
