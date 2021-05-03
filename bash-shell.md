@@ -375,6 +375,8 @@ rsync -zvrah --delete --progress user@server:/home "/mnt/c/Backup"
 
 `df -h` print disk space
 
+`convert -density 200x200 -quality 60 -compress jpeg file1.pdf file2-compressed.pdf` per comprimere un'immagine PDF in jpg e quindi in PDF
+
 # Python
 
 `python -c "import sys; print(sys.path)"` per vedere dov'è il path python giusto
