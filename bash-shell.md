@@ -347,6 +347,12 @@ Host nomealias
 rsync -zvrah --delete --progress user@server:/home "/mnt/c/Backup"
 ```
 
+Per syncare [più sources insieme](https://unix.stackexchange.com/questions/368210/how-to-rsync-multiple-source-folders):
+
+```bash
+rsync -vap --progress --stats root@server:{/etc,/root/backups,/home/ultralazer} /mnt/bigdrive
+```
+
 # Miscellanea
 
 `neofetch` info belle di sistema con il logo in ASCII (funziona anche su MacOS)
