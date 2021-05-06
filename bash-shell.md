@@ -390,6 +390,8 @@ rsync -vap --progress --stats root@server:{/etc,/root/backups,/home/ultralazer} 
 
 `brew bundle dump brew bundle dump --force --file=~/Folder/Brewfile` create a `Brewfile` with all updated Homebrew packages there
 
+`sudo scutil --set HostName 'yourHostName'` per cambiare `nome@host` nel prompt
+
 # Python
 
 `python -c "import sys; print(sys.path)"` per vedere dov'è il path python giusto
