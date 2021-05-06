@@ -353,6 +353,15 @@ Per syncare [più sources insieme](https://unix.stackexchange.com/questions/3682
 rsync -vap --progress --stats root@server:{/etc,/root/backups,/home/ultralazer} /mnt/bigdrive
 ```
 
+# PDF
+
+`gv` per aprire `.ps` e `.pdf` files via X11 in modo leggero e _veloce_
+
+`convert -density 200x200 -quality 60 -compress jpeg file1.pdf file2-compressed.pdf` per comprimere un'immagine PDF in jpg e quindi in PDF
+
+`gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dDownsampleColorImages=true -dColorImageResolution=150 -dNOPAUSE  -dBATCH -sOutputFile=output.pdf INPUT.pdf` per comprimere un PDF
+
+
 # Miscellanea
 
 `neofetch` info belle di sistema con il logo in ASCII (funziona anche su MacOS)
@@ -369,8 +378,6 @@ rsync -vap --progress --stats root@server:{/etc,/root/backups,/home/ultralazer} 
 
 `!n` ripete l'n-esimo comando
 
-`gv` per aprire `.ps` e `.pdf` files via X11 in modo leggero e _veloce_
-
 `curl ipinfo.io` vede le info sul tuo IP
 
 `printf '%s\n' "${PWD#*/}"` printa il nome della cartella in cui sei (basename)
@@ -381,9 +388,7 @@ rsync -vap --progress --stats root@server:{/etc,/root/backups,/home/ultralazer} 
 
 `df -h` print disk space
 
-`convert -density 200x200 -quality 60 -compress jpeg file1.pdf file2-compressed.pdf` per comprimere un'immagine PDF in jpg e quindi in PDF
-
-`brew bundle dump` create a `Brewfile` with all updated Homebrew packages
+`brew bundle dump brew bundle dump --force --file=~/Folder/Brewfile` create a `Brewfile` with all updated Homebrew packages there
 
 # Python
 
