@@ -392,6 +392,13 @@ rsync -vap --progress --stats root@server:{/etc,/root/backups,/home/ultralazer} 
 
 `sudo scutil --set HostName 'yourHostName'` per cambiare `nome@host` nel prompt
 
+calcolatrice (`bc`)
+
+```bash
+$ bc <<<"236-192"
+44
+``` 
+
 # Python
 
 `python -c "import sys; print(sys.path)"` per vedere dov'è il path python giusto
