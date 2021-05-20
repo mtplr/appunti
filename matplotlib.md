@@ -193,7 +193,7 @@ plt.savefig(f'{os.path.basename(__file__)[:-3]}.pdf')
 plt.show()
 ```
 
-## IR spectra comparison
+## IR spectra comparison
 
 ```python
 #!/usr/bin/env python
