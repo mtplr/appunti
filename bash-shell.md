@@ -92,7 +92,7 @@ Table of Contents
 
 ```bash
 $ type l
-l is aliased to `ls --color -lah --group-directories-first'
+l is aliased to 'ls --color -lah --group-directories-first'
 
 $ type cd
 cd is a shell builtin
