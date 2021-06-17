@@ -549,12 +549,14 @@ Di default non funziona l'assegnazione dei permessi con `chmod`. Per farlo è ne
 ```bash
 $ sudo nano /etc/wsl.conf
 
-# aggiungi questo:
+# aggiungi questo
 [automount]
 options = "metadata"
 
 # reboot WSL 
 ```
+
+OT: (comunque a Marzo 2021 sono passato a Mac perché non ce la facevo più col crapware. WSL resta comunque l'unica cosa bella di microsoft insieme a VSCode, asd.) 
 
 # Risorse e link vari
 
