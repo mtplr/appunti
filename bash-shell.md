@@ -10,7 +10,7 @@ Table of Contents
 
    * [Importante (generale)](#importante-generale)
    * [Jolly](#jolly)
-   * [Navigazione](#navigazione)
+   * [Basic](#Basic)
    * [less](#less)
    * [Ranger](#ranger)
    * [Archivi](#archivi)
@@ -58,7 +58,7 @@ Table of Contents
 
 `*` = tutto
 
-# Navigazione
+# Basic
 
 `cd ..` vai in su
 
@@ -87,6 +87,16 @@ Table of Contents
 `pwd` will output the name of the present working directory
 
 `ln -s source_file symbolic_link` creo un link simbolico (collegamento)
+
+`type` restituisce alias o tipo di comando
+
+```bash
+$ type l
+l is aliased to `ls --color -lah --group-directories-first'
+
+$ type cd
+cd is a shell builtin
+```
 
 # less
 
