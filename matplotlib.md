@@ -5,6 +5,7 @@ Some useful plots.
 ## Table Of Content
 
 - [Matplotlib](#matplotlib)
+  - [Quick plot of a .csv](#quick-plot-of-a-csv)
   - [Table Of Content](#table-of-content)
   - [Simple plot](#simple-plot)
   - [Misc](#misc)
