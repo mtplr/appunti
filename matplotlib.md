@@ -10,6 +10,35 @@ Some useful plots.
   - [Misc](#misc)
   - [Axis and for-loop](#axis-and-for-loop)
 
+## Quick plot of a .csv
+
+You can take `n` columns via `np` and assign them a name for later plotting.
+
+```python
+#!/usr/bin/env python3
+
+
+import numpy as np
+from matplotlib import pyplot as plt
+from matplotlib import rc
+
+
+data = np.genfromtxt("efield.csv", delimiter=",", 
+                     names=["atom", "x", "y", "z"])
+
+plt.plot(data['atom'], data['x'], label = "$v_x$")
+plt.plot(data['atom'], data['y'], label = "$v_y$")
+plt.plot(data['atom'], data['z'], label = "$v_z$")
+
+plt.ylabel('Test')
+plt.xlabel('Test')
+
+plt.legend()
+plt.savefig('plot.pdf')
+
+```
+
+
 ## Simple plot
 
 ```python
