@@ -64,7 +64,7 @@ Table of Contents
 
 `ls` listi
 
-`ll` listi tutto dettagliato (`-h` = human readable, vedi i GB etc)
+`cdls() { cd "$@" && ls; }` funzione per fare cd+ls
 
 `touch` crei un file e/o aggiorni timestamp
 
@@ -352,6 +352,8 @@ Host nomealias
 
 `--dry-run` per **testare** il funzionamento e fare una simulazione
 
+`--max-size=100k` per backuppare tutto sotto i 100 KiB
+
 ```bash
 # rsync personalizzato per server SSH
 rsync -zvrah --delete --progress user@server:/home "/mnt/c/Backup"
@@ -380,7 +382,7 @@ rsync -vap --progress --stats root@server:{/etc,/root/backups,/home/ultralazer} 
 
 `w` chi è connesso e che fa
 
-`du -hc . | sort -rh | head -20` spazio occupato dalla roba qua (.)
+`du -hc . | sort -rh | head -20` spazio, peso occupato dalla roba qua (.)
 
 `chmod +x (775)` rendi il file eseguibile (e tutto il resto) da: me, group, not all (7= rwx, 5=rw)
 
