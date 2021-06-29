@@ -278,6 +278,8 @@ from the current directory
 `sed -i 's/\r$//' filename` se hai un file fatto in windows serve per togliere l'a capo che ti può dare errore da 
 linux, ATTENZIONE all'-i che vuol dire "in line mod"
 
+`sed -i 's/old-text/new-text/g' input.txt
+
 `sed '/PATTERN/q' FILE`, stampa tutto il file finché non trova `PATTERN`.
 
 > for each line, we look if it matches `/PATTERN`:
@@ -400,7 +402,7 @@ rsync -vap --progress --stats root@server:{/etc,/root/backups,/home/ultralazer} 
 
 `df -h` print disk space
 
-`brew bundle dump brew bundle dump --force --file=~/Folder/Brewfile` create a `Brewfile` with all updated Homebrew packages there
+`brew bundle dump --force --file=~/Folder/Brewfile` create a `Brewfile` with all updated Homebrew packages there
 
 `sudo scutil --set HostName 'yourHostName'` per cambiare `nome@host` nel prompt
 
