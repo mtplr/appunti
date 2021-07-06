@@ -565,5 +565,4 @@ OT: (comunque a Marzo 2021 sono passato a Mac perché non ce la facevo più col 
 # Risorse e link vari
 
 * [Introduction to Scientific Computing](https://gitlab.com/eamonnmurray/IntroToScientificComputing/-/blob/master/README.md). Eccellente risorsa schematica per coloro che si affacciano a linux, allo scientific computing e alla chimica computazionale.
-* [Tutarial interessante sulle regex (Youtube)](https://www.youtube.com/watch?v=sa-TUpSx1JA)
-* Table of Contents powered by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
+* [Tutorial interessante sulle regex (Youtube)](https://www.youtube.com/watch?v=sa-TUpSx1JA)
