@@ -509,7 +509,7 @@ Per splittare un comando singolo in più linee (attenzione al LF! attenzione ci 
 
 ## Cicli for utili
 
-`for filename in */gas/BLA-1.dat; do ...`
+`for d in */; do cp txt.txt "$d"; done` copia un file dentro ogni cartella
 
 ```bash
 # Per le directories:
