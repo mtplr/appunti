@@ -250,7 +250,7 @@ and `\*`. Case Sensitive! Per una parte sola usa `"OUT*"` tipo per `OUTPUT`
 
 `find . -maxdepth 1 -type d` cerca tutte le sottocartelle (max 1 di profondità)
 
-`find . -type d -exec script.sh "{}" ";"` cerca le cartelle ed eseguisci uno script dentro
+`find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && pwd && script.sh" \;` cerca le cartelle ed eseguisci uno script dentro
 
 ## grep
 
