@@ -480,6 +480,8 @@ conda info # displays info
 
 `$1` usalo come primo argomento variabile nel `.sh` (sarà il primo comando passato da terminale e così via, `$1, $2, $3...`)
 
+`$*` se vuoi passare più argomenti (tipo `arg1 arg2 arg3`)
+
 `$_` è il parametro più recente
 
 `nano script.sh && chmod +x $_` crea un nuovo script e lo rende eseguibile
