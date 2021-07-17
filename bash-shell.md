@@ -501,6 +501,17 @@ Per splittare un comando singolo in più linee (attenzione al LF! attenzione ci 
 "../chcl3/IR-norm.dat"
 ```
 
+Se vuoi creare un file .txt con testo da bash:
+
+```bash
+cat > file.txt <<EOF
+asd
+asdas; dasd
+Prova Foo
+Bar>!
+EOF
+```
+
 ## I/O Redirect
 
 `>` redirect to (**no errors**)
