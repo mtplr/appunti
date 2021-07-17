@@ -278,6 +278,8 @@ from the current directory
 `sed -i 's/\r$//' filename` se hai un file fatto in windows serve per togliere l'a capo che ti può dare errore da 
 linux, ATTENZIONE all'-i che vuol dire "in line mod"
 
+`sed -i '' -e 's/T/F/g' FILE` sostituisci T con F linea per linea 
+
 `sed -i 's/old-text/new-text/g' input.txt
 
 `sed '/PATTERN/q' FILE`, stampa tutto il file finché non trova `PATTERN`.
