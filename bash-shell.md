@@ -282,6 +282,8 @@ from the current directory
 `sed -i 's/\r$//' filename` se hai un file fatto in windows serve per togliere l'a capo che ti può dare errore da 
 linux, ATTENZIONE all'-i che vuol dire "in line mod"
 
+`tac file.txt | sed '1,50s/T/F/g' | tac` replace every T with F in the last 50 lines of `file.txt`
+
 `sed '/PATTERN/q' FILE`, stampa tutto il file finché non trova `PATTERN`.
 
 > for each line, we look if it matches `/PATTERN`:
