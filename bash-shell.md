@@ -277,6 +277,12 @@ from the current directory
 
 ## sed and rename
 
+**NOTA IMPORTANTE SU SED.**
+
+[Non funziona ovunque allo stesso modo!](https://stackoverflow.com/questions/4247068/sed-command-with-i-option-failing-on-mac-but-works-on-linux) 
+
+Per farlo andare allo stesso modo sia su Linux che su Mac (OS 10.9+) devi togliere lo spazio `sed -i'' -e ...`
+
 `sed -i '' -e 's/T/F/g' FILE` sostituisci T con F linea per linea
 
 `sed -i '' -e '142,145s/T/F/g' FILE` sostituisci T con F linea per linea dalla linea 142 alla 145 comprese
