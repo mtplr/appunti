@@ -390,6 +390,10 @@ rsync -vap --progress --stats root@server:{/etc,/root/backups,/home/ultralazer} 
 
 # Miscellanea
 
+`yes | comando` dice sì a tutto
+
+`yes n | comando` dice no a tutto
+
 `neofetch` info belle di sistema con il logo in ASCII (funziona anche su MacOS)
 
 `htop` task manager
