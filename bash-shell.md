@@ -273,6 +273,8 @@ from the current directory
 `grep -r --exclude='*.sql' searchtex dir/` will recursively search but EXCLUDE THOSE FILES es:
 `grep -r --exclude='blacomcalc-output' BLA >> all_BLA`
 
+`tac stdout | grep E0 -m 1` grep dal basso e si ferma alla prima occorrenza
+
 `history | grep comando` trova tutti gli ultimi comandi relativi a quello
 
 ## sed and rename
