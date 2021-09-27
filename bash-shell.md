@@ -431,6 +431,20 @@ $ bc <<<"236-192"
 44
 ``` 
 
+"Finder is using it; can't eject" problem
+
+```
+[matteo@aria ~]$ lsof /Volumes/
+.timemachine/        Macintosh HD/        Disk/
+[matteo@aria ~]$ lsof /Volumes/WindscribeInstaller/
+COMMAND  PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+lsd      624 matteo    4r   DIR   1,22      102   20 /Volumes/Disk/Disk.app
+lsd      624 matteo    5r   DIR   1,22      102   20 /Volumes/Disk/Disk.app
+Finder  3370 matteo   16r   DIR   1,22      102   20 /Volumes/Disk/Disk.app
+Finder  3370 matteo   18r   DIR   1,22      102   20 /Volumes/Disk/Disk.app
+[matteo@aria ~]$ kill 624 3370
+```
+
 # Python
 
 `python -c "import sys; print(sys.path)"` per vedere dov'è il path python giusto
