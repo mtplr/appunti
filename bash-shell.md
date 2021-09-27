@@ -436,7 +436,7 @@ $ bc <<<"236-192"
 ```
 [matteo@aria ~]$ lsof /Volumes/
 .timemachine/        Macintosh HD/        Disk/
-[matteo@aria ~]$ lsof /Volumes/WindscribeInstaller/
+[matteo@aria ~]$ lsof /Volumes/Disk/
 COMMAND  PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
 lsd      624 matteo    4r   DIR   1,22      102   20 /Volumes/Disk/Disk.app
 lsd      624 matteo    5r   DIR   1,22      102   20 /Volumes/Disk/Disk.app
