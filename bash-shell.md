@@ -15,7 +15,6 @@ Table of Contents
    * [Ranger](#ranger)
    * [Archivi](#archivi)
    * [nano](#nano)
-      * [.nanorc](#nanorc)
    * [Ricerca file e manipolazione testo](#ricerca-file-e-manipolazione-testo)
       * [find](#find)
       * [grep](#grep)
@@ -462,7 +461,7 @@ Se devi eseguire uno script su un altro sistema e ti servono le dipendenze:
 
 ## easygui
 
-```
+```python
 import easygui as gui
 
 
