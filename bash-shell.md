@@ -452,6 +452,35 @@ Finder  3370 matteo   18r   DIR   1,22      102   20 /Volumes/Disk/Disk.app
 `#!/usr/bin/env python3` da mettere come shebang all'inizio dello script python per farlo interpretare corretamente 
 a linux indipendentemente dalla distribuzione
 
+## requirements
+
+Se devi eseguire uno script su un altro sistema e ti servono le dipendenze:
+
+1) `pip3 install pipreqs` in locale 
+2) `pipreqs .` nella cartella dello script per generare `requirements.txt``
+3) sull'altro sistema eseguire `pip install -r requirements.txt`(`-r` = requirements)
+
+## easygui
+
+```
+import easygui as gui
+
+
+# per selezionare un file da finestra
+
+pdf = gui.fileopenbox(msg="Scegli un file PDF",
+		  multiple=False,
+		  title = "Scegli un file PDF", 
+		  filetypes=['*.pdf'])
+
+filename = os.path.basename(pdf)
+
+# messagebox
+
+print(gui.msgbox(f'Il file creato è {filename}.'))
+```
+
+
 ## argv
 
 `sys.argv[1]` Per passare il **primo comando** da shell in modo *quick-and-dirty* allo script python. Il primo argument (`[0]`) è sempre il nome dello script, dal secondo (`[1]`) ci sono le vars passate da shell.
