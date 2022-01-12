@@ -446,6 +446,17 @@ Finder  3370 matteo   18r   DIR   1,22      102   20 /Volumes/Disk/Disk.app
 
 # Python
 
+## linebreak e csv
+
+**IMPORTANTISSIMO!** Se si manipolano file .csv tra windows macOS e linux ci sono problemi di linebreak e per esempio su Windows ti aggiunge uno spazio tra una linea e l'altra. Per risolvere il problema basta aggiungere `lineterminator='\n'`:
+
+```python
+with open('tmp.csv', 'r') as inp, open('tmp-e.csv', 'w') as out:
+        writer = csv.writer(out, delimiter=',', lineterminator='\n')
+```
+
+## path
+
 `python -c "import sys; print(sys.path)"` per vedere dov'è il path python giusto
 
 `#!/usr/bin/env python3` da mettere come shebang all'inizio dello script python per farlo interpretare corretamente 
